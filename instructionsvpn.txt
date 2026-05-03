@@ -1,0 +1,19 @@
+Step 3: Setup v2rayNG on Android
+1. Download `v2rayNG` from the Google Play Store.
+2. Open the app, click the "+" icon in the top right, and select "Type manually (VLESS)".
+3. Fill in the following details EXACTLY like this:
+   - Remarks: Free MTN
+   - Address (server): 104.16.248.249 (or onlinecms.mtn.co.za)
+   - Port: 443
+   - ID (UUID): 611100ce-f8d4-4a5e-89db-fded7bfb1816
+   - Flow: (Leave blank)
+   - Network: ws (WebSocket)
+   - Security: tls
+   - Path: /
+   - Host: zero.secure-login.co.za
+   - SNI: onlinecms.mtn.co.za
+   - Fingerprint (fp): chrome
+4. Save the configuration (the checkmark in the top right).
+5. Tap the "V" icon at the bottom to connect.
+
+Your carrier will see a TLS connection going directly to onlinecms.mtn.co.za (zero-rated). The traffic will actually hit Cloudflare, where your Worker on zero.secure-login.co.za will unwrap it and give you full, free internet access!
